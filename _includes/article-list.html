@@ -82,7 +82,7 @@
 
     {%- elsif include.type == 'brief' -%}
       {%- assign _tags = '' -%}
-      {%- for _tag in _article.tags -%}
+      {%- for _tag in _article.categories -%}
         {%- assign _tag_encode = _tag | strip | url_encode -%}
         {%- if forloop.last -%}
           {%- assign _tags = _tags | append: _tag_encode -%}

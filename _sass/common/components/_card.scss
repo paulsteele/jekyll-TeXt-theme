@@ -1,12 +1,12 @@
-
 .card {
   max-width: 18rem;
   border-radius: map-get($base, border-radius);
   @include box-shadow();
   @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
   & > :first-child {
-    border-top-left-radius: map-get($base, border-radius);
-    border-top-right-radius: map-get($base, border-radius);
+    // Customization
+    // border-top-left-radius: map-get($base, border-radius);
+    // border-top-right-radius: map-get($base, border-radius);
   }
   & > :last-child {
     border-bottom-right-radius: map-get($base, border-radius);
