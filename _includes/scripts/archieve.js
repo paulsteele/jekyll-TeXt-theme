@@ -39,6 +39,7 @@
     var $tagShowAll = $tags.find('.tag-button--all');
     var $result = $('.js-result');
     var $sections = $result.find('section');
+    var $feed = $('.subscribe').find('a');
     var sectionArticles = [];
     var $lastFocusButton = null;
     var sectionTopArticleIndex = [];
@@ -78,6 +79,13 @@
     function tagSelect (tag/*raw tag*/, target) {
       var result = {}, $articles;
       var i, j, k, _tag;
+
+      if (tag){
+        $feed.prop('href', '/feed/' + tag + '.xml')
+      }
+      else{
+        $feed.prop('href', '/feed.xml')
+      }
 
       for (i = 0; i < sectionArticles.length; i++) {
         $articles = sectionArticles[i];
